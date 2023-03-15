@@ -1,32 +1,18 @@
-<style>
-  /* so we can use ／ and ＼ */
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
-  
-  body {
-    background-color: #0082c8;
-    color: #ffffff;
-    font-size: 30px;
-    line-height: 30px;
-    word-wrap: anywhere;
-    font-family: "Noto Serif SC";
-  }
-</style>
-
-<body></body> 
-
 <script>
+
+const gifURL = 'jokebear-nongdamgom.gif'
   
+function createGIF () {
+  const gif = document.createElement ('img') // <img>
+  gif.src = gifURL // <img src="jokebear-nongdamgom.gif">
+  document.body.appendChild(gif)
+}
   
-  function draw () {
-    const fps = 1000 / 
-    setTimeout(draw, fps)
-    let ran = Math.random() 
-  if (ran > 0.5) {
-    document.body.innerText += '／'
-  }  else {
-    document.body.innerText += '＼'
+  function setup() {
+    createGif()
   }
-  }
-	draw()
   
+  window.addEventListener('load', setup)
+
+
 </script>
